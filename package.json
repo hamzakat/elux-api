@@ -1,0 +1,11 @@
+{
+  "name": "elux-api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "express": "^4.17.2",
+    "form-data": "^4.0.0"
+  }
+}
