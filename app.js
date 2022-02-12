@@ -2,11 +2,8 @@ import express from 'express';
 import { getSimDetails } from './submit.js';
 import { body, validationResult } from 'express-validator';
 
-let PORT = 3000;
-const args = process.argv.slice(2);
-if (args[0] && parseInt(args[0])) PORT = args[0];
-
 const app = express();
+let PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -33,5 +30,5 @@ app.post('/',
 
 app.listen(PORT, function(err){
     if (err) console.log(err);
-    console.log("Listening on port ", PORT);
+    console.log("Listening on port", PORT);
 });
