@@ -1,16 +1,17 @@
+# eLUX API
 ## SIM Details
 https://e-luxmobile.com/sim-details/
+<br />
 
-
-### Input (Form fields)
+## Input (Form fields)
 `
 {
     'id': number, 
     'pNum': number
 }
 `
-
-### Output (result)
+<br />
+## Output (result)
 `
 { `<br />`
     'phone_number': number, `<br />`
@@ -28,7 +29,7 @@ https://e-luxmobile.com/sim-details/
 `
 
 
-### Psuedo code
+## The Process (psuedo code)
 - prompt user to enter form data
 - send request
 - scrap the response webpage
