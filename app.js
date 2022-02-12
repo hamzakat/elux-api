@@ -28,7 +28,7 @@ app.post('/',
     }
 );
 
-app.listen(PORT, function(err){
+app.listen(process.env.PORT || 3000, function(err){
     if (err) console.log(err);
     console.log("Listening on port", PORT);
 });
