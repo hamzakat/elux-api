@@ -40,3 +40,10 @@ https://e-luxmobile.com/sim-details/
 - else: read the table inside the #content html element
 - convert to json
 - return json
+
+## Libraries and tools
+- Node.js
+- [Express.js](expressjs.com/)  
+  - [express-validator](https://express-validator.github.io/docs/https://link)
+- [axios](https://axios-http.com/)
+- [form-data](https://github.com/form-data/form-data)
