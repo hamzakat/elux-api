@@ -8,6 +8,8 @@ The goal is converting the official website's services into an API by:
 - Retruning the response to the user as JSON
 <br />
 
+This API can be useful used for automation purposes.
+<br />
 ## Input (Form fields)
 `
 {
@@ -17,21 +19,24 @@ The goal is converting the official website's services into an API by:
 `
 <br />
 ## Output (result)
+
+
 `
-{ `<br />`
-    'phone_number': number, `<br />`
-    'iccid': number, `<br />`
-    'status': string, `<br />`
-    'activiation_date': string, `<br />`
-    'registeration_date': string, `<br />`
-    'refill_date': string, `<br />`
-    'dormant_date': string, `<br />`
-    'terminated_date': string, `<br />`
-    'cash_balance': string, `<br />`
-    'minutes_balance': string, `<br />`
-    'data_balance': string `<br />`
+{`<br />`
+  "Phone Number": string,`<br />`
+  "ICCID": string,`<br />`
+  "Status": string,`<br />`
+  "Activation Date": string,`<br />`
+  "Registration Date": string,`<br />`
+  "Last Top Up Date": string,`<br />`
+  "Dormant Date": string,`<br />`
+  "Terminated Date": string,`<br />`
+  "Cash Balance": string,`<br />`
+  "Minutes Balance": string,`<br />`
+  "Data Balance":  string`<br />`
 }
 `
+
 
 ## Libraries and tools
 - Node.js
@@ -81,9 +86,15 @@ or
 ```bash
 yarn start
 ```
-But you can override the port by adding it as an argument:
+But the port can be modified by set the environement variable "PORT".
+
+
+## Testing
 ```bash
-yarn start 4444
+curl --location --request POST 'https://elux-api.herokuapp.com' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": "YOUR_REGISTERED_ID_NUM",
+    "phone": "352681000000"
+}'
 ```
-
-
