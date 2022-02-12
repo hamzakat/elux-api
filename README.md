@@ -46,3 +46,44 @@ The goal is converting the official website's services into an API by:
 - [X] Extract data from the recieved webpage (Web Scraping) 
 - [X] Return the result as JSON
 
+## Installation
+
+```bash
+npm install
+```
+or
+
+```bash
+yarn install
+```
+
+## Development
+
+You can use the development server (with nodemon) by running:
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+yarn dev
+```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Running
+By default, the server listen on port 3000:
+```bash
+npm start
+```
+or
+```bash
+yarn start
+```
+But you can override the port by adding it as an argument:
+```bash
+yarn start 4444
+```
+
+
