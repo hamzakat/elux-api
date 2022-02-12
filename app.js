@@ -7,9 +7,9 @@ const app = express();
 app.use(express.json());
 
 app.post('/', 
-    body('id').isInt().isLength({max: 11, min: 11}).withMessage('ID length must be 11'),
+    body('id').isInt().isLength({max: 11, min: 11}).withMessage('Please enter the registeration ID number (length must be 11)'),
 
-    body('phone').isInt().isLength({max: 12, min: 12}).withMessage('Phone number length must be 12'),
+    body('phone').isInt().isLength({max: 12, min: 12}).withMessage('Please enter the phone number (length must be 12)'),
 
     (req, res) => {
         const errors = validationResult(req);
@@ -19,8 +19,8 @@ app.post('/',
         }
 
         getSimDetails(req.body.id, req.body.phone)
-        .then((data)=> {
-            return res.status(200).json({data: data});
+        .then((details)=> {
+            return res.status(200).json(details);
         })
   
     }
