@@ -18,10 +18,8 @@ app.post(
   "/",
   body("id")
     .isInt()
-    .isLength({ max: 11, min: 11 })
-    .withMessage(
-      "Please enter the registeration ID number (length must be 11)"
-    ),
+    .isLength({ min: 1 })
+    .withMessage("Please enter a valid registeration ID number"),
 
   body("phone")
     .isInt()
