@@ -40,7 +40,7 @@ app.post(
   }
 );
 
-app.listen(process.env.PORT || 3000, function (err) {
+app.listen(PORT, function (err) {
   if (err) console.log(err);
   console.log("Listening on port", PORT);
 });
